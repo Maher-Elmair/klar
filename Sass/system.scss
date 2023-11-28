@@ -1,0 +1,198 @@
+// import globalStyle
+@import "_globalStyle.scss";
+
+/*! start code */
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  .col-content {
+    width: 40%;
+    padding: 2rem 4rem;
+    .header {
+      .logo {
+        max-width: 100%;
+        height: auto;
+        text-decoration: none;
+        svg {
+          fill: var(--bs-white);
+        }
+      }
+    }
+    .main-content {
+      padding-top: 2rem;
+      max-width: 24rem;
+      .form {
+        display: block;
+        .form-input {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          flex-wrap: nowrap;
+          flex-direction: column;
+          gap: 1rem;
+          padding-bottom: 2.125rem;
+          .form-label {
+            font-size: 1.2rem;
+            color: var(--bs-white);
+          }
+          .form-control {
+            border: none;
+            outline-style: none;
+            width: -webkit-fill-available;
+            height: 3rem;
+            border-radius: 0.5rem;
+            background-color: #343a40;
+            font-size: calc(1rem + 0.3vw);
+            padding-left: 1rem;
+            &:hover,
+            &:focus,
+            &:active {
+              background-color: var(--bs-white);
+            }
+          }
+          .text-help {
+            font-size: 1rem;
+            color: var(--bs-secondary);
+          }
+        }
+      }
+      .form-check {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 0.75rem;
+        .checkbox {
+          --border: #d1d6ee;
+          --border-hover: #bbc1e1;
+          --border-active: #1717e5;
+          --tick: #fff;
+          position: relative;
+          input,
+          svg {
+            width: 21px;
+            height: 21px;
+            display: block;
+          }
+          input {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            position: relative;
+            outline: none;
+            background: var(--bs-white);
+            border: none;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: box-shadow 0.3s;
+            box-shadow: inset 0 0 0 var(--s, 1px) var(--b, var(--border));
+            &:hover {
+              --s: 2px;
+              --b: var(--border-hover);
+            }
+            &:checked {
+              --b: var(--border-active);
+            }
+          }
+          svg {
+            pointer-events: none;
+            fill: none;
+            stroke-width: 2px;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke: var(--stroke, var(--border-active));
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 21px;
+            height: 21px;
+            transform: scale(var(--scale, 1)) translateZ(0);
+          }
+          &.bounce {
+            --stroke: var(--tick);
+            input {
+              &:checked {
+                --s: 11px;
+                & + svg {
+                  animation: bounce 0.4s linear forwards 0.2s;
+                }
+              }
+            }
+            svg {
+              --scale: 0;
+            }
+          }
+        }
+        .text-label {
+          color: var(--bs-white);
+          font-size: calc(0.975rem + 0.2vw);
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+  .col-color {
+    background-image: linear-gradient(24deg, #1717e5, transparent 21%),
+      linear-gradient(198deg, rgba(255, 193, 7, 0.2) 11%, transparent 0),
+      linear-gradient(
+        50deg,
+        #6610f2 5%,
+        #6f42c1 32%,
+        #d63384 35%,
+        #dc3545 65%,
+        #fd7e14 83%,
+        #ffc107 91%
+      );
+    max-width: 100%;
+    width: 60%;
+    height: 100vh;
+  }
+  /* desktop-small*/
+  @include media("<=999px") {
+    .col-content {
+      width: 50%;
+    }
+    .col-color {
+      width: 50%;
+    }
+  }
+  /* tablet */
+  @include media("<=tablet") {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    height: 100vh;
+    .col-content {
+        width: 80%;
+        .main-content{
+            max-width: initial;
+        }
+    }
+    .col-color {
+        width: 100%;
+    }
+  }
+    /*small*/
+    @include media("<=576px"){
+        .col-content {
+            width: 100%;
+            padding: 2rem 1rem;
+        }
+    }
+
+}
+
+/*! end code */
+
+@keyframes bounce {
+  50% {
+    transform: scale(1.2);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
