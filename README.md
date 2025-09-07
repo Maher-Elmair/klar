@@ -12,13 +12,13 @@ This project is inspired by the original design by **Holger**.
 ## 📸 Screenshots
 
 ### 🖥️ Home Screen  
-![Home Preview](screencapture-Template-klar-Home.png)
+![Home Preview](/design/screencapture-Template-klar-Home.png)
 
 ### 🖥️ About Screen  
-![About Preview](screencapture-Template-klar-About.png)
+![About Preview](/design/screencapture-Template-klar-About.png)
 
 ### 🖥️ System Screen  
-![System Preview](screencapture-Template-klarl-system.png)
+![System Preview](/design/screencapture-Template-klarl-system.png)
 
 ---
 
@@ -83,7 +83,7 @@ Klar-Landing-Page/
 
 ## 🚀 Live Demo
 
-🔗 [View Live Project](https://maher-elmair.github.io/Klar/)
+🔗 [View Live Project](https://maher-elmair.github.io/klar/)
 
 ---
 
