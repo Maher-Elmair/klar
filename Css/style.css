@@ -203,18 +203,15 @@ html [data-pos=fade-right],
 html [data-pos=fade-up] {
   transition-duration: 0.8s;
   pointer-events: auto;
-  transition-property: opacity, transform, -webkit-transform;
+  transition-property: opacity, transform;
 }
 html [data-pos=fade-right] {
-  -webkit-transform: translate3d(-100px, 0, 0);
   transform: translate3d(-100px, 0, 0);
 }
 html [data-pos=fade-left] {
-  -webkit-transform: translate3d(100px, 0, 0);
   transform: translate3d(100px, 0, 0);
 }
 html [data-pos=fade-up] {
-  -webkit-transform: translate3d(0, 100px, 0) scale(0.6);
   transform: translate3d(0, 100px, 0) scale(0.6);
 }
 html [data-pos-duration="2000"] {
@@ -226,7 +223,6 @@ html [data-pos-duration="3000"] {
 html [data-pos=fade-right].active,
 html [data-pos=fade-left].active,
 html [data-pos=fade-up].active {
-  -webkit-transform: translate3d(0px, 0, 0);
   transform: translate3d(0px, 0, 0);
 }
 
